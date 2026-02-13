@@ -1,18 +1,21 @@
 while True:
     try:
         nome = input("Digite seu nome de usuário: ").strip()
-        senha = input("Digite sua senha: ").strip()
+        senha = input("Digite sua senha, ela deve ter 6 caracteries: ")
 
         if nome =="":
-            print("O nome não pode ser vazio. ")
-        
-        if 0 <= senha <= 10:
-            break
+                print("O nome não pode ser vazio. ")
+                continue
+        if len(senha) <= 6:
+               break
         else:
-            print("A senha deve ter 6 caracteries.")
+             print("A senha deve ter 6 caracteries.", senha )
+
     except ValueError:
         print("Digite uma senha válida")
 
-print("Nota registrada!", senha)
+        
+  
+print("Login cadastrado com sucesso!", senha)
 
-print("Nome, nome")
+print("Nome", nome)
